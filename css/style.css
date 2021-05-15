@@ -1,0 +1,244 @@
+* {
+    margin: 0;   /* establezco el margen */
+    padding: 0;  /* establezco el espacio de cada lado */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-image: url(../img/fondlo.jpg); /*aqui ingreso mi imagen */   
+}
+.container {
+    padding: 20px;
+    width: 100%; /*pido que mmi ancho sea del 100 por ciento*/
+    max-width: 800px; /*aqui solicito que la anchura maxima sea de 800px*/
+    margin: auto;
+    position: relative; /*en esta posicion mi contenedor agrega 20 px a la posicion izquierda*/
+}
+/*aqui empiezo a modificar mi contenedor llamada caja trasera */
+.caja_trasera { 
+    width: 100%;
+    padding: 5px 5px;
+    display: flex; /*me permite colocar a mi contenedor que sea flexible */
+    justify-content: center;    
+    background-color: rgba(0, 128, 255, 0.5);
+    text-align: center;
+    height: 270px;
+   
+}
+.caja_trasera div{
+    margin: 40px 40px;
+    color: #fff;    
+} 
+.caja_trasera div h3 {
+    font-weight: 400;
+    font-size: 26px;
+}
+.caja_trasera button {
+    padding: 20px 40px;
+    border: 2px solid #fff;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    transition: all 300ms;
+}
+.caja_trasera a{
+    padding: 5px 40px;
+    background: transparent;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+  
+}
+/* diseño de botones de la caja tarsera opciones de enlaces */
+#btn-login {
+    padding: 20px 40px;
+    border: none;
+    background: rgba(38, 20, 155, 0.664);
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+}
+
+#btn-login:hover { /*en esta parte el hover me va a permitir cambiar de color  de caja cuando el mouse pase por encima de elemento */
+    background: #fff;
+    color: #46A2FD;
+}
+#btn-login button:active {
+    background: rgb(91, 89, 226);
+	color: #ffffff;
+}
+#btn-registro {
+    padding: 20px 40px;
+    border: none;
+    background: rgba(38, 20, 155, 0.664);
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+}
+
+#btn-registro:hover { /*en esta parte el hover me va a permitir cambiar de color  de caja cuando el mouse pase por encima de elemento */
+    background: #fff;
+    color: #46A2FD;
+}
+#btn-registro button:active {
+    background: rgb(91, 89, 226);
+	color: #ffffff;
+}
+/*aqui dare diseño a mis formularios de registro y login*/
+.contenedor-registro {    
+    margin: auto;
+    margin-top: 60px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 10px 10px;
+    border-top: 4px solid #017bab;
+    
+}
+.contenedor-registro form {
+    width: 100%;
+    padding: 60px 20px;
+    background: #fff;    
+    border-radius: 20px;
+    margin: auto;
+    align-items: center;
+}
+.contenedor-registro form h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #46A2FD;
+}
+.contenedor-registro form input {
+    width: 95%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+}
+
+.contenedor-registro form button {
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 18px;
+    background:#46A2FD;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;    
+}
+.contenedor-login {    
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 5px 8px 10px #000;
+    padding: 10px 20px;
+    border-top: 4px solid #017bab;
+    
+}
+.contenedor-login form {
+    width: 100%;
+    padding: 60px 20px;
+    background: #fff;    
+    border-radius: 20px;
+    margin: auto;
+}
+.contenedor-login form h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #46A2FD;
+}
+.contenedor-login form input {
+    width: 95%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    
+}
+.contenedor-login form button {
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 18px;
+    background:#46A2FD;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+/* este son para poder centrar mis botones de login-registro */
+.centrar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    }
+    .btn-centrar{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+/*aqui aplicare el responsive design*/
+@media screen and (max-width: 850px){
+    main{
+        margin-top: 50px;
+    }
+    .caja_trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+    .caja_trasera div{
+        margin: 0px;
+        position: absolute;
+    }
+
+    /*formulario */
+    .contenedor-login {
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+    .contenedor-login form {
+        position: relative;
+    }
+    .contenedor-registro {
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+    .contenedor-registro form {
+        position: relative;
+    }
+}
+
+input[type="radio"], input[type="checkbox"] {
+    display: none;
+  }
+  label {
+    padding-left: 1.25em;
+    background: url('https://s3-eu-west-1.amazonaws.com/static.oscargascon.es/wp-content/media/check-radio-sprites.png') no-repeat top left; 
+  }
+  input[type="radio"] + label   {
+    background-position: 0 -42px; width: 24px; height: 24px;
+  }
+  input[type="radio"]:checked + label {
+    background-position: 0 -71px; width: 24px; height: 24px;
+  }
+  input[type="checkbox"] + label {
+    background-position: 0 0; width: 16px; height: 16px;
+  }
+  input[type="checkbox"]:checked + label {
+    background-position: 0 -21px; width: 16px; height: 16px;
+  }
